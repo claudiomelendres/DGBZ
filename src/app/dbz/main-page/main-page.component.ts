@@ -29,19 +29,12 @@ export class MainPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  agregar(): void {
-    if ( this.nuevo.nombre.trim().length === 0 ) {
-      return;
-    }
-
-    this.personajes.push(this.nuevo);
-    this.nuevo = {nombre: '', poder: 0};
-
-    console.log(this.nuevo);
-  }
-
   // cambiarNombre( event: any) {
   //   console.log(event);
   // }
+
+  agregarNuevoPersonaje( argumento: Personaje): void  {
+    this.personajes.push(argumento);
+  }
 
 }
