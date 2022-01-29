@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DbzService} from '../services/dbz.service';
 
 interface Personaje {
   nombre: string;
@@ -13,18 +14,12 @@ interface Personaje {
 export class MainPageComponent implements OnInit {
 
 
-  personajes: Personaje[] = [
-    {nombre: 'Goku', poder: 15000},
-    {nombre: 'Vegeta', poder: 7500},
-  ];
-
   nuevo: Personaje = {
     nombre: 'Trucks',
     poder: 14000
   };
 
-
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }
@@ -33,8 +28,6 @@ export class MainPageComponent implements OnInit {
   //   console.log(event);
   // }
 
-  agregarNuevoPersonaje( argumento: Personaje): void  {
-    this.personajes.push(argumento);
-  }
+
 
 }
